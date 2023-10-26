@@ -1,19 +1,20 @@
 use rusqlite::{params, Connection, Result};
 
-fn main() -> Result<()> {
+#[test]
+fn test_main() -> Result<()> {
     // Connect to the database
     let conn = Connection::open("my_database.db")?;
 
     // Drop the people table if it exists
     conn.execute("DROP TABLE IF EXISTS people", [])?;
-    
+
     // Create a new table
     conn.execute(
         "CREATE TABLE IF NOT EXISTS people (
-            id INTEGER PRIMARY KEY,
-            name TEXT,
-            age INTEGER
-         )",
+        id INTEGER PRIMARY KEY,
+        name TEXT,
+        age INTEGER
+     )",
         [],
     )?;
 
@@ -33,17 +34,12 @@ fn main() -> Result<()> {
         params![31, "Alice"],
     )?;
 
-    // Print all records
     let mut stmt = conn.prepare("SELECT id, name, age FROM people")?;
-    let rows = stmt.query_map([], |row| Ok((row.get(0)?, row.get(1)?, row.get(2)?)))?;
 
-    for row in rows {
-        let (id, name, age): (i32, String, i32) = row?;
-        println!("id = {}, name = {}, age = {}", id, name, age);
-    }
-
-    // Delete Bob's record
-    conn.execute("DELETE FROM people WHERE name = ?", params!["Bob"])?;
-
+    let rows: Vec<(i32, String, i32)> = stmt
+        .query_map([], |row| Ok((row.get(0)?, row.get(1)?, row.get(2)?)))?
+        .map(|r| r.unwrap())
+        .collect();
+    assert_eq!(rows.len(), 2);
     Ok(())
 }
