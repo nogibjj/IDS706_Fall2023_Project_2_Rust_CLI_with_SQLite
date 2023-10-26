@@ -38,7 +38,6 @@ to run the ``main.rs`` code. It should perform the following database operations
 <br>
 It should print out the records like this:<br>
 ![](demo_img/demo_print.png)
-<br>
 
 To run the unit test, simply run
 ```bash
