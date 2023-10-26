@@ -37,6 +37,7 @@ to run the ``main.rs`` code. It should perform the following database operations
 - Delete ``Bob``'s record
 <br>
 It should print out the records like this:<br>
+
 ![](demo_img/demo_print.png)
 
 To run the unit test, simply run
