@@ -6,7 +6,7 @@ fn main() -> Result<()> {
 
     // Drop the people table if it exists
     conn.execute("DROP TABLE IF EXISTS people", [])?;
-    
+
     // Create a new table
     conn.execute(
         "CREATE TABLE IF NOT EXISTS people (
