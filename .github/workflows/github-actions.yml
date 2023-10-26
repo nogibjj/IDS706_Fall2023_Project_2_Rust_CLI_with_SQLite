@@ -28,3 +28,19 @@ jobs:
         with:
           name: my_binary
           path: target/release/my_binary
+
+  download:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download binary
+        uses: actions/download-artifact@v2
+        with:
+          name: my_binary
+          path: target/release/my_binary
+
+      - name: Make binary available for download
+        uses: actions/upload-artifact@v2
+        with:
+          name: my_binary
+          path: target/release/my_binary
