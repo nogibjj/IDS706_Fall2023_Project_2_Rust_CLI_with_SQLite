@@ -1,20 +1,30 @@
-name: complete_workflow
+name: Rust Build
+
 on:
   push:
-    branches: [ "main" ]
+    branches: [main]
   pull_request:
-    branches: [ "main" ]
+    branches: [main]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - name: install
-        run: make install
-      - name: format
-        run: make format
-      - name: lint
-        run: make lint
-      - name: test
-        run: make test
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: stable
+
+      - name: Build binary
+        run: cargo build --release
+
+      - name: Archive binary
+        uses: actions/upload-artifact@v2
+        with:
+          name: my_binary
+          path: target/release/my_binary

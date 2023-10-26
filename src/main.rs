@@ -32,9 +32,7 @@ fn main() -> Result<()> {
 
     // Print all records
     let mut stmt = conn.prepare("SELECT id, name, age FROM people")?;
-    let rows = stmt.query_map([], |row| {
-        Ok((row.get(0)?, row.get(1)?, row.get(2)?))
-    })?;
+    let rows = stmt.query_map([], |row| Ok((row.get(0)?, row.get(1)?, row.get(2)?)))?;
 
     for row in rows {
         let (id, name, age): (i32, String, i32) = row?;
