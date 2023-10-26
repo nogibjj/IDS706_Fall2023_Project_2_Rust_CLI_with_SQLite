@@ -26,5 +26,5 @@ jobs:
       - name: Archive binary
         uses: actions/upload-artifact@v2
         with:
-          name: my_binary
-          path: target/release/my_binary
+          name: IDS706_Fall2023_Project_2_Rust_CLI_with_SQLite
+          path: target/release/IDS706_Fall2023_Project_2_Rust_CLI_with_SQLite
