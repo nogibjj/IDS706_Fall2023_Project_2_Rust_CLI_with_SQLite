@@ -1,7 +1,7 @@
-[![install](https://github.com/yuchenz427/IDS706-Python-Template/actions/workflows/install.yml/badge.svg)](https://github.com/yuchenz427/IDS706-Python-Template/actions/workflows/install.yml)
-[![lint](https://github.com/yuchenz427/IDS706-Python-Template/actions/workflows/lint.yml/badge.svg)](https://github.com/yuchenz427/IDS706-Python-Template/actions/workflows/lint.yml)
-[![format](https://github.com/yuchenz427/IDS706-Python-Template/actions/workflows/format.yml/badge.svg)](https://github.com/yuchenz427/IDS706-Python-Template/actions/workflows/format.yml)
-[![test](https://github.com/yuchenz427/IDS706-Python-Template/actions/workflows/test.yml/badge.svg)](https://github.com/yuchenz427/IDS706-Python-Template/actions/workflows/test.yml)
+[![install](https://github.com/nogibjj/IDS706_Fall2023_Project_2_Rust_CLI_with_SQLite/actions/workflows/install.yml/badge.svg)](https://github.com/nogibjj/IDS706_Fall2023_Project_2_Rust_CLI_with_SQLite/actions/workflows/install.yml)
+[![lint](https://github.com/nogibjj/IDS706_Fall2023_Project_2_Rust_CLI_with_SQLite/actions/workflows/lint.yml/badge.svg)](https://github.com/nogibjj/IDS706_Fall2023_Project_2_Rust_CLI_with_SQLite/actions/workflows/lint.yml)
+[![format](https://github.com/nogibjj/IDS706_Fall2023_Project_2_Rust_CLI_with_SQLite/actions/workflows/format.yml/badge.svg)](https://github.com/nogibjj/IDS706_Fall2023_Project_2_Rust_CLI_with_SQLite/actions/workflows/format.yml)
+[![test](https://github.com/nogibjj/IDS706_Fall2023_Project_2_Rust_CLI_with_SQLite/actions/workflows/test.yml/badge.svg)](https://github.com/nogibjj/IDS706_Fall2023_Project_2_Rust_CLI_with_SQLite/actions/workflows/test.yml)
 # IDS706_Fall2023_Project_2_Rust_CLI_with_SQLite
 
 Fall 2023 IDS_706 Data Engineering Systems Individual Project 2: Rust CLI with SQLite
