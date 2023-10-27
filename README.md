@@ -6,7 +6,7 @@
 
 Fall 2023 IDS_706 Data Engineering Systems Individual Project 2: Rust CLI with SQLite
 
-### Demo Video On Youtube: 
+### Demo Video On Youtube: https://youtu.be/i9KL22y-GyY
 
 The project contains:
 
